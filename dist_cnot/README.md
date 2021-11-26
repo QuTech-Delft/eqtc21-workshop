@@ -33,15 +33,22 @@ For example, `phi = 0` and `theta = 0.5` represents the `|+>` state.
 (Note that `phi` and `theta` are scaled by a factor `pi` in the application code.)
 
 ```
-e = create_epr(Sender)
+e = create_epr(Controller)
 
-m1 = receive_classical(Sender)
-m2 = receive_classical(Sender)
+target_qubit = new_qubit()
+rotate_y(target_qubit, theta)
+rotate_z(target_qubit, phi)
 
-if m2 == 1:
-  x_gate(e)
-if m1 == 1:
-  z_gate(e)
+controller_m = receive_classical(Controller)
 
-return e
+if controller_m == 1:
+  gate_x(e)
+
+cnot(e, target_qubit)
+hadamard(e)
+
+m = measure(e)
+send_classical(m, Controller)
+
+
 ```
