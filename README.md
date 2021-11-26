@@ -1,0 +1,1 @@
+Run an application by `netqasm simulate --app-dir <directory>`, e.g. `netqasm simulate --app-dir teleport`.
