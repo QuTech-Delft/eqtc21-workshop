@@ -57,3 +57,14 @@ You may want to add an extra `--log-level INFO` or `--log-level DEBUG` flag to t
 Results are put in `log/LAST/results.yaml`. (There are also other logs in the `log/LAST` directory, like which instructions were executed and when which quantum state existed. These logs are actually used on the QNE website to produce the animations!)
 
 Make sure your application code ends with a `return {}` statement, returing the values you want to see in the `results.yaml` file.
+
+
+# Going beyond
+If you already managed to implement the QNE apps, or if you just want to go for a more difficult challenge straight away,
+you can try and implement one of the protocols from the [Quantum Protocol Zoo](https://wiki.veriqloud.fr).
+
+Some of these are more (much more) complex than others. The following protocols are suggestions to start with:
+
+- https://wiki.veriqloud.fr/index.php?title=Wiesner_Quantum_Money
+- https://wiki.veriqloud.fr/index.php?title=Quantum_Bit_Commitment
+- https://wiki.veriqloud.fr/index.php?title=Prepare-and-Send_Universal_Blind_Quantum_Computation
